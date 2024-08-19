@@ -38,8 +38,10 @@ CREATE TABLE `libros` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `libros` (`id`, `nombre`, `autor`, `categoria`, `fechaPublicacion`, `isbn`) VALUES
-(1, 'Libro uno', 'Autor uno', 'Ficción', '2020-01-01','isbn123456'),
-(2, 'Libro dos', 'Autor dos', 'No Ficción', '2021-02-02', 'isbn234567');
+(1, 'Cien años de soledad', 'Gabriel García Márquez', 'Drama', '2020-01-01','isbn123456'),
+(2, 'El señor de los anillos', 'J. R. R. Tolkien', 'Ficción', '2021-02-02', 'isbn234567');
+(3, 'Orgullo y prejuicio', 'Jane Austen', 'Romance', '2021-02-02', 'isbn896332');
+(4, 'Crimen y castigo', 'Fiódor Dostoyevski', 'Ficción', '2021-02-02', 'isbn857412');
 --
 -- Índices para tablas volcadas
 --
