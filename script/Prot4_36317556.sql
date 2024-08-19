@@ -33,11 +33,11 @@ CREATE TABLE `libros` (
   `nombre` varchar(30) NOT NULL,
   `autor` varchar(30) NOT NULL,
   `categoria` varchar(30) NOT NULL,
-  `fechaPublicacion` date NOT NULL,
+  `anoPublicacion` date NOT NULL,
   `isbn` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `libros` (`id`, `nombre`, `autor`, `categoria`, `fechaPublicacion`, `isbn`) VALUES
+INSERT INTO `libros` (`id`, `nombre`, `autor`, `categoria`, `anoPublicacion`, `isbn`) VALUES
 (1, 'Cien años de soledad', 'Gabriel García Márquez', 'Drama', '2020-01-01','isbn123456'),
 (2, 'El señor de los anillos', 'J. R. R. Tolkien', 'Ficción', '2021-02-02', 'isbn234567');
 (3, 'Orgullo y prejuicio', 'Jane Austen', 'Romance', '2021-02-02', 'isbn896332');

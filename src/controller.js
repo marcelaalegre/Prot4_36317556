@@ -40,12 +40,12 @@ class LibroController{
           !libro.nombre ||
           !libro.autor ||
           !libro.categoria ||
-          !libro.fechaPublicacion ||
+          !libro.anoPublicacion ||
           !libro.isbn
         ) {
           return res.status(400).json({ message: "Faltan atributos requeridos" });
         }
-        const [result] = await pool.query(`INSERT INTO libros(nombre,autor,categoria,fechaPublicacion,isbn) VALUES (?,?,?,?,?)`,[libro.nombre,libro.autor,libro.categoria,libro.fechaPublicacion,libro.isbn]);
+        const [result] = await pool.query(`INSERT INTO libros(nombre,autor,categoria,anoPublicacion,isbn) VALUES (?,?,?,?,?)`,[libro.nombre,libro.autor,libro.categoria,libro.anoPublicacion,libro.isbn]);
         res.json(("Libro insertado",result.insertid ));
       } catch (error) {
         // Manejar cualquier error que ocurra durante la inserción
@@ -102,13 +102,13 @@ class LibroController{
           !libro.nombre ||
           !libro.autor ||
           !libro.categoria ||
-          !libro.fechaPublicacion ||
+          !libro.anoPublicacion ||
           !libro.isbn
         ) {
           return res.status(400).json({ message: "Faltan atributos requeridos" });
         }
 
-        const [result] = await pool.query(`UPDATE libros SET nombre=(?), autor=(?), categoria=(?), fechaPublicacion=(?), isbn=(?) WHERE id=(?)`,[libro.nombre, libro.autor, libro.categoria, libro.fechaPublicacion, libro.isbn, libro.id]);
+        const [result] = await pool.query(`UPDATE libros SET nombre=(?), autor=(?), categoria=(?), anoPublicacion=(?), isbn=(?) WHERE id=(?)`,[libro.nombre, libro.autor, libro.categoria, libro.anoPublicacion, libro.isbn, libro.id]);
        
         if (result.changedRows === 0) {
           // Si no se actualizó ningún libro, devolver un error 404
