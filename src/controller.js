@@ -2,7 +2,7 @@ import {pool} from './database.js';
 
 class LibroController{
     
-    async getAllLibros(req, res) {
+    async getAll(req, res) {
       // Obtener todos los libros
       try {
         const [result] = await pool.query("SELECT * FROM libros");
@@ -13,7 +13,7 @@ class LibroController{
       }
     }
 
-    async getLibro(req, res) {
+    async getOne(req, res) {
       // Obtener un libro por su ID
       const { id } = req.params;
       try {
